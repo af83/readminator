@@ -4,7 +4,7 @@ module Readminator
     blocks = Parsinator.blocks(readme)
     $stderr.puts blocks.inspect
     blocks.each do |(language, code)|
-      errors << { line: 1, error: code }
+      errors << { line: 1, error: "", language: language }
     end
     errors
   end
