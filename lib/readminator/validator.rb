@@ -1,21 +1,15 @@
-require "open3"
+require "readminator/validator/default"
 
 module Readminator
   class Validator
     def self.for(language)
-      Validator::Ruby.new
-    end
-
-    class Ruby
-      def check(code, line)
-        Open3.popen3("ruby -c") do |stdin, stdout, stderr, wait|
-          stdin << code
-          stdin.close
-          exit_status = wait.value
-          return { line: line, error: stderr.read.chomp, language: "ruby" } if exit_status != 0
-        end
-        nil
+      if File.exists?(File.expand_path "../validator/#{language}.rb", __FILE__)
+        require "readminator/validator/#{language}"
+        Validator.const_get(language.capitalize).new
+      else
+        Validator::Default.new
       end
     end
+
   end
 end
