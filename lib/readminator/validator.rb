@@ -7,12 +7,12 @@ module Readminator
     end
 
     class Ruby
-      def check(code)
+      def check(code, line)
         Open3.popen3("ruby -c") do |stdin, stdout, stderr, wait|
           stdin << code
           stdin.close
           exit_status = wait.value
-          return { line: 1, error: stderr.read.chomp, language: "ruby" } if exit_status != 0
+          return { line: line, error: stderr.read.chomp, language: "ruby" } if exit_status != 0
         end
         nil
       end

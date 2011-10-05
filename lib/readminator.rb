@@ -2,9 +2,9 @@ module Readminator
   def validate(readme)
     errors = []
     blocks = Parsinator.blocks(readme)
-    blocks.each do |(language, code)|
+    blocks.each do |(line, language, code)|
       validator = Validator.for(language)
-      errors << validator.check(code)
+      errors << validator.check(code, line)
     end
     errors.compact
   end
