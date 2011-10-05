@@ -15,5 +15,6 @@ Gem::Specification.new do |s|
   s.files        = `git ls-files lib`.split("\n")
   s.platform     = Gem::Platform::RUBY
   s.require_path = 'lib'
-  s.add_dependency "redcarpet", "2.0.0b5"
+  s.add_dependency "redcarpet"
+  s.add_dependency "nokogiri"
 end

@@ -1,8 +1,9 @@
 module Readminator
   def validate(readme)
     errors = []
-    blocks = Parsinator.new(readme).blocks
-    blocks.each do |(code,language)|
+    blocks = Parsinator.blocks(readme)
+    $stderr.puts blocks.inspect
+    blocks.each do |(language, code)|
       errors << { line: 1, error: code }
     end
     errors
