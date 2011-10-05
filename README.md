@@ -4,7 +4,11 @@ Parse and extract code portion from mardown and try to parse it.
 
 ## Usage
 
-TODO
+```ruby
+require 'readminator'
+
+puts Readminator.validate(File.read('README.md'))
+```
 
 ## License
 

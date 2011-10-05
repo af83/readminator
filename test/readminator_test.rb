@@ -5,6 +5,11 @@ require_relative 'test_helper'
 require "minitest/autorun"
 
 describe Readminator do
+  it "ensure we have a good README" do
+    readme = File.expand_path(File.join(File.dirname(__FILE__), '..', 'README.md'))
+    Readminator.validate(File.read(readme)).must_equal []
+  end
+
   Dir[File.expand_path(File.join(File.dirname(__FILE__), 'fixtures/**/*.rb'))].sort.each do |path|
     name = File.basename path, '.rb'
     dir = File.dirname path
