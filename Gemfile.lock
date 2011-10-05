@@ -1,0 +1,16 @@
+PATH
+  remote: .
+  specs:
+    readminator (0.0.1)
+      redcarpet (= 2.0.0b5)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    redcarpet (2.0.0b5)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  readminator!

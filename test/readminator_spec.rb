@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # encoding: utf-8
 
-require_relative 'spec_helper'
+require_relative 'test_helper'
 require "minitest/autorun"
 
 describe Readminator do
@@ -11,7 +11,7 @@ describe Readminator do
   end
 
   it "validate a readme with code and one error" do
-    readme <<EOF
+    readme = <<EOF
 ```ruby
 plop = 'roger
 ```

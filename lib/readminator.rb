@@ -1,8 +1,14 @@
 module Readminator
-  def self.validate(readme)
-    []
+  def validate(readme)
+    errors = []
+    blocks = Parsinator.new(readme).blocks
+    blocks.each do |(code,language)|
+      errors << { line: 1, error: code }
+    end
+    errors
   end
+  module_function :validate
 
-  autoload :VERSION,    "readminator/version"
   autoload :Parsinator, "readminator/parsinator"
+  autoload :VERSION,    "readminator/version"
 end
