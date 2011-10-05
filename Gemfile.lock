@@ -2,14 +2,10 @@ PATH
   remote: .
   specs:
     readminator (0.0.1)
-      nokogiri
-      redcarpet
 
 GEM
   remote: http://rubygems.org/
   specs:
-    nokogiri (1.5.0)
-    redcarpet (1.17.2)
 
 PLATFORMS
   ruby

@@ -1,7 +1,3 @@
-require "redcarpet"
-require "nokogiri"
-
-
 module Readminator
   class Parsinator
     def self.blocks(readme)
