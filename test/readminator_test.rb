@@ -15,7 +15,7 @@ describe Readminator do
     dir = File.dirname path
     md_file = "#{File.join(dir, File.basename(path, '.rb'))}.md"
     it "validate #{name}" do
-      Readminator.validate(File.read(md_file)).must_equal eval(File.read path), name
+      Readminator.validate(File.read(md_file)).must_equal eval(File.read path)
     end
   end
 end
