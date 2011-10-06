@@ -2,6 +2,20 @@
 
 Parse and extract code portion from mardown and try to parse it.
 
+**Note: This is highly experimental.**
+
+Current supported languages:
+
+* Ruby
+* CoffeeScript
+* Lua
+
+More languages comming soon.
+
+## Install
+
+    gem install readminator
+
 ## Usage
 
 ```ruby
