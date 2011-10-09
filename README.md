@@ -1,10 +1,10 @@
 # Readminator
 
-Parse and extract code portion from mardown and try to parse it.
+Parse and extract code portions from markdown and try to parse it.
 
 **Note: This is highly experimental.**
 
-Current supported languages:
+Currently supported languages:
 
 * Ruby
 * CoffeeScript
