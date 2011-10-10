@@ -1,6 +1,6 @@
 # Readminator
 
-Parse and extract code portions from markdown and try to parse it.
+Extract code portions from markdown and try to parse it.
 
 **Note: This is highly experimental.**
 
